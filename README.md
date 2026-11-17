@@ -34,3 +34,25 @@ src/
     ├── vision_perception/      # Vision nodes and model weights
     ├── package.xml
     └── setup.py
+
+⚙️ Installation & Build
+Clone the repository into your ROS 2 workspace src directory:
+
+Bash
+cd ~/root_directory/src
+git clone [https://github.com/muzammil-05/Flutter-ROS-Surveillance-App-Project-IoT.git](https://github.com/muzammil-05/Flutter-ROS-Surveillance-App-Project-IoT.git)
+Install required dependencies (such as Ultralytics and OpenCV):
+
+Bash
+pip3 install ultralytics opencv-python numpy
+Build the workspace using colcon:
+
+Bash
+cd ~/root_directory
+colcon build --symlink-install
+source install/setup.bash
+🚀 Usage & Launch
+To launch the complete navigation stack along with simulation time and configuration parameters, run:
+
+Bash
+ros2 launch custom_navigation custom_nav.launch.py use_sim_time:=true pose_source:=tf goal_standoff:=0.8
